@@ -1,0 +1,10 @@
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.csprojResolveAssemblyReference.cache
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\QuestAppWebApi.DataStorage.dll.config
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\QuestAppWebApi.DataStorage.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\QuestAppWebApi.DataStorage.pdb
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\EntityFramework.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\EntityFramework.SqlServer.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\EntityFramework.xml
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Debug\EntityFramework.SqlServer.xml
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.pdb

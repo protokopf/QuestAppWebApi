@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "CreateQuest";
+}
+
+<script type="text/javascript" src="~/Scripts/ViewModels/CreateQuestViewModel.js"></script>
+
+<h2>CreateQuest</h2>
+
+<div class="form-group">
+    <label for="title">Title: </label>
+    <input id="title" type="text" class="form-control" data-bind="value: Title" />
+</div>
+
+<div class="form-group">
+    <label for="description">Description:</label>
+    <input id="description" type="text" class="form-control" data-bind="value: Description" />
+</div>
+
+<div class="form-group">
+    <label for="deadline">Deadline:</label>
+    <input id="deadline" type="datetime-local" class="form-control" data-bind="value: Deadline" />
+</div>
+
+<div class="form-group">
+    <label for="states">Current state:</label>
+    <select class="form-control" id="states" data-bind="value: State">
+        <option value="0">Progress</option>
+        <option value="1">Done</option>
+        <option value="2">Failed</option>
+        <option value="3">Idled</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="parents">Child of:</label>
+    <select class="form-control" id="parents" data-bind="options: OtherQuests, optionsText: GetParentTitle, value: CurrentParent">
+    </select>
+</div>
+
+<input type="button" class="btn-default" data-bind="click: GetOtherQuests" value="Refresh" />
+
+<div class="checkbox">
+    <label> <input type="checkbox" data-bind="checked: IsImportant"> Is important?</label>
+</div>
+
+<input class="btn-default" type="button" value="Create quest" data-bind="click: CreateQuest" />
+
+

@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestAppWebAPi", "QuestAppWebAPi\QuestAppWebAPi.csproj", "{456AAF7D-316D-4C50-860E-4EA258279E12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestAppWebApi.DataStorage", "QuestAppWebApi.DataStorage\QuestAppWebApi.DataStorage.csproj", "{0D54A375-C8E7-4AC3-A442-6C721E39A274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{456AAF7D-316D-4C50-860E-4EA258279E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456AAF7D-316D-4C50-860E-4EA258279E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456AAF7D-316D-4C50-860E-4EA258279E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D54A375-C8E7-4AC3-A442-6C721E39A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D54A375-C8E7-4AC3-A442-6C721E39A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D54A375-C8E7-4AC3-A442-6C721E39A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D54A375-C8E7-4AC3-A442-6C721E39A274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

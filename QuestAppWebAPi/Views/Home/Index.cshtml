@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/ViewModels/QuestListViewModel.js"></script>
+
+<h2>Quest list</h2>
+
+<br/>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>ParentId</td>
+                <td>CurrentState</td>
+                <td>Title</td>
+                <td>Description</td>
+                <td>Deadline</td>
+                <td>IsImportant</td>               
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: QuestList">
+            <tr>
+                <td data-bind="text: Id"></td>
+                <td data-bind="text: ParentId"></td>
+                <td data-bind="text: CurrentState"></td>
+                <td data-bind="text: Title"></td>
+                <td data-bind="text: Description"></td>
+                <td data-bind="text: Deadline"></td>
+                <td data-bind="text: IsImportant"></td>
+                <td><input class="btn-default" type="button" value="Delete" data-bind="click: $parent.DeleteQuest" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <input class="btn-default" type="button" value="Refresh" data-bind="click: GetQuestList" />
+</div>
+
+
