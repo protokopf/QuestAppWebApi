@@ -1,36 +1,52 @@
 ﻿$(document).ready(function () {
+    function QuestModel(title, description, deadline, parent, state, isImportant)
+    {
+        var self = this;
+
+        self.Title = ko.observable(title);
+        self.Description = ko.observable(description);
+        self.Deadline = ko.observable(deadline);
+        self.Parent = ko.observable(parent);
+        self.State = ko.observable(state);
+        self.IsImportant = ko.observable(isImportant);
+
+        self.Reset = function(){
+            self.Title("");
+            self.Description("");
+            self.Deadline("");
+            self.Parent("");
+            self.State(0);
+            self.IsImportant(false);
+        }
+    }
+
     function CreateQuestViewModel() {
         var self = this;
 
         var _nullParentObject = { Title: "Without parent", Id: 0 };
+
+        var createQuestModel = function () {
+            return new QuestModel("", "", "", _nullParentObject, 0, false);
+        }
         var createQuestData = function()
         {
-            var parent = self.CurrentParent();
-
             var questData = {
-                Title: self.Title(),
-                Description: self.Description(),
-                Deadline: self.Deadline(),
-                ParentId: self.CurrentParent().Id,
-                CurrentState: self.State(),
-                IsImportant: self.IsImportant()
+                Title: self.CurrentQuest().Title(),
+                Description: self.CurrentQuest().Description(),
+                Deadline: self.CurrentQuest().Deadline(),
+                ParentId: self.CurrentQuest().Parent().Id,
+                CurrentState: self.CurrentQuest().State(),
+                IsImportant: self.CurrentQuest().IsImportant()
             };
-
             return questData;
         }
 
-        self.Title = ko.observable("");
-        self.Description = ko.observable("");
-        self.Deadline = ko.observable("");
-        self.CurrentParent = ko.observable(_nullParentObject);
-        self.State = ko.observable(0);
-        self.IsImportant = ko.observable(false);
-
+        self.CurrentQuest = ko.observable(createQuestModel());
         self.OtherQuests = ko.observableArray([_nullParentObject]);
         self.GetOtherQuests = function () {
             $.ajax({
                 type: "GET",
-                url: "http://localhost:37993/api/Quests",
+                url: "/api/Quests",
                 dataType: "json",
                 success: function (data) {
                     self.OtherQuests([_nullParentObject]);
@@ -43,18 +59,18 @@
         };
 
         self.ClearViewModel = function () {
-            self.Title("");
-            self.Description("");
-            self.Deadline("");
-            self.CurrentParent(_nullParentObject);
-            self.State(0);
-            self.IsImportant(false);
+            self.CurrentQuest().Title("");
+            self.CurrentQuest().Description("");
+            self.CurrentQuest().Deadline("");
+            self.CurrentQuest().Parent("");
+            self.CurrentQuest().State(0);
+            self.CurrentQuest().IsImportant(false);
         }
         self.CreateQuest = function () {
             var questData = createQuestData();
             $.ajax({
                 type: "POST",
-                url: "http://localhost:37993/api/Quests",
+                url: "/api/Quests",
                 dataType: "json",
                 data: questData,
                 success: function () {

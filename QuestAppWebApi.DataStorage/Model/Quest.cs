@@ -19,6 +19,7 @@ namespace QuestAppWebApi.DataStorage.Model
         public string Title { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> Deadline { get; set; }
+        public System.DateTime? StartTime { get; set; }
         public Nullable<int> CurrentState { get; set; }
         public Nullable<bool> IsImportant { get; set; }
     }
