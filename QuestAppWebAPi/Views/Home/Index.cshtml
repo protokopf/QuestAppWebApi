@@ -18,6 +18,7 @@
                 <td>CurrentState</td>
                 <td>Title</td>
                 <td>Description</td>
+                <td>Start date</td>
                 <td>Deadline</td>
                 <td>IsImportant</td>               
             </tr>
@@ -26,9 +27,10 @@
             <tr>
                 <td data-bind="text: Id"></td>
                 <td data-bind="text: ParentId"></td>
-                <td data-bind="text: CurrentState"></td>
+                <td data-bind="text: $root.FormCurrentState($data.CurrentState)"></td>
                 <td data-bind="text: Title"></td>
                 <td data-bind="text: Description"></td>
+                <td data-bind="text: StartDate"></td>
                 <td data-bind="text: Deadline"></td>
                 <td data-bind="text: IsImportant"></td>
                 <td><input class="btn-default" type="button" value="Delete" data-bind="click: $parent.DeleteQuest" /></td>

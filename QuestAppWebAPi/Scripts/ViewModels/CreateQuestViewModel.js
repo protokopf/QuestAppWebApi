@@ -5,19 +5,11 @@
 
         self.Title = ko.observable(title);
         self.Description = ko.observable(description);
+        self.StartDate = ko.observable("");
         self.Deadline = ko.observable(deadline);
         self.Parent = ko.observable(parent);
         self.State = ko.observable(state);
         self.IsImportant = ko.observable(isImportant);
-
-        self.Reset = function(){
-            self.Title("");
-            self.Description("");
-            self.Deadline("");
-            self.Parent("");
-            self.State(0);
-            self.IsImportant(false);
-        }
     }
 
     function CreateQuestViewModel() {
@@ -28,11 +20,11 @@
         var createQuestModel = function () {
             return new QuestModel("", "", "", _nullParentObject, 0, false);
         }
-        var createQuestData = function()
-        {
+        var createQuestData = function() {
             var questData = {
                 Title: self.CurrentQuest().Title(),
                 Description: self.CurrentQuest().Description(),
+                StartDate: self.CurrentQuest().StartDate(),
                 Deadline: self.CurrentQuest().Deadline(),
                 ParentId: self.CurrentQuest().Parent().Id,
                 CurrentState: self.CurrentQuest().State(),
@@ -61,6 +53,7 @@
         self.ClearViewModel = function () {
             self.CurrentQuest().Title("");
             self.CurrentQuest().Description("");
+            self.CurrentQuest().StartDate("");
             self.CurrentQuest().Deadline("");
             self.CurrentQuest().Parent("");
             self.CurrentQuest().State(0);
@@ -74,8 +67,8 @@
                 dataType: "json",
                 data: questData,
                 success: function () {
-                    alert("Quest created!");
                     self.ClearViewModel();
+                    alert("Quest created!");
                 },
                 error: function (jqXHR, status, error) {
                     alert("Failed to create quest. Error: " + error);
@@ -83,9 +76,6 @@
                 }         
             });
         };
-        self.GetParentTitle = function(item){
-            return item.Title;
-        }
     }
 
     ko.applyBindings(new CreateQuestViewModel());

@@ -4,6 +4,27 @@
     {
         var self = this;
 
+        self.FormCurrentState = function (stateNumber) {
+            var stateString = "";
+            switch(stateNumber) {
+                case 0:
+                    stateString = "Idle";
+                    break;
+                case 1:
+                    stateString = "Progress";
+                    break;
+                case 2:
+                    stateString = "Done";
+                    break;
+                case 3:
+                    stateString = "Failed";
+                    break;
+                default:
+                    stateString = "Undefined";
+            }
+            return stateString;
+        }
+
         self.QuestList = ko.observableArray([]);
 
         self.GetQuestList = function () {
@@ -31,7 +52,7 @@
         }
     }
 
-    var ViewModel = new QuestListViewModel()
+    var ViewModel = new QuestListViewModel();
 
     ViewModel.GetQuestList();
 

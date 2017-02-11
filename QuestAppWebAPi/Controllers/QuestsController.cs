@@ -1,11 +1,11 @@
-﻿using QuestAppWebApi.DataStorage;
-using QuestAppWebApi.DataStorage.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using QuestAppWebApi.DataStorage.Entities;
+using QuestAppWebApi.DataStorage.Model;
 
 namespace QuestAppWebAPi.Controllers
 {
@@ -16,7 +16,7 @@ namespace QuestAppWebAPi.Controllers
     {
         public HttpResponseMessage Get()
         {
-            using (QuestsDBEntities context = new QuestsDBEntities())
+            using (QuestDataBaseContext context = new QuestDataBaseContext())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, context.Quests.ToList());
             }
@@ -24,7 +24,7 @@ namespace QuestAppWebAPi.Controllers
 
         public HttpResponseMessage Get(int id)
         {
-            using (QuestsDBEntities context = new QuestsDBEntities())
+            using (QuestDataBaseContext context = new QuestDataBaseContext())
             {
                 Quest getted = context.Quests.FirstOrDefault(q => q.Id == id);
                 if (getted == null)
@@ -41,7 +41,7 @@ namespace QuestAppWebAPi.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, new Exception("Posted data is not specified!"));
             }
-            using (QuestsDBEntities context = new QuestsDBEntities())
+            using (QuestDataBaseContext context = new QuestDataBaseContext())
             {
                 context.Quests.Add(model);
                 context.SaveChanges();
@@ -53,7 +53,7 @@ namespace QuestAppWebAPi.Controllers
         {
             if (quest != null)
             {
-                using (QuestsDBEntities context = new QuestsDBEntities())
+                using (QuestDataBaseContext context = new QuestDataBaseContext())
                 {
                     Quest changed = context.Quests.FirstOrDefault(q => q.Id == id);
                     if (changed != null)
@@ -61,6 +61,7 @@ namespace QuestAppWebAPi.Controllers
                         changed.ParentId = quest.ParentId;
                         changed.Title = quest.Title;
                         changed.Description = quest.Description;
+                        changed.StartDate = quest.StartDate;
                         changed.Deadline = quest.Deadline;
                         changed.IsImportant = quest.IsImportant;
                         changed.CurrentState = quest.CurrentState;
@@ -75,7 +76,7 @@ namespace QuestAppWebAPi.Controllers
 
         public HttpResponseMessage Delete(int id)
         {
-            using (QuestsDBEntities context = new QuestsDBEntities())
+            using (QuestDataBaseContext context = new QuestDataBaseContext())
             {
                 Quest deleted = context.Quests.FirstOrDefault(q => q.Id == id);
                 if (deleted != null)
