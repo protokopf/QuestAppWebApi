@@ -1,0 +1,13 @@
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\QuestAppWebApi.DataStorage.dll.config
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\QuestAppWebApi.DataStorage.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\QuestAppWebApi.DataStorage.pdb
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\EntityFramework.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\EntityFramework.SqlServer.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\EntityFramework.xml
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\bin\Release\EntityFramework.SqlServer.xml
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.csprojResolveAssemblyReference.cache
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.Migrations.InitialCreate.resources
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.Migrations.AddStartDateField.resources
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.csproj.GenerateResource.Cache
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.dll
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Release\QuestAppWebApi.DataStorage.pdb

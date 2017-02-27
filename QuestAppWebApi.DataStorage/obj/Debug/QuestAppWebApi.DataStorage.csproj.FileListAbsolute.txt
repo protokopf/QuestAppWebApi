@@ -10,3 +10,4 @@ E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestA
 E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.Migrations.InitialCreate.resources
 E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.csproj.GenerateResource.Cache
 E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.Migrations.AddStartDateField.resources
+E:\Applications\Quest\QuestAppWebApi\QuestAppWebApi.DataStorage\obj\Debug\QuestAppWebApi.DataStorage.csprojResolveAssemblyReference.cache

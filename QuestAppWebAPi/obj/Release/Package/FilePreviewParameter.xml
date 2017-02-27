@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="TestSite" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Applications\\Quest\\QuestAppWebApi\\QuestAppWebAPi\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\Applications\\Quest\\QuestAppWebApi\\QuestAppWebAPi\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="QuestAppWebApi.DataStorage.Model.QuestDataBaseContext-Web.config Connection String" description="" value="Data Source=DESKTOP-R1A1S1O\SQLEXPRESS;Initial Catalog=QuestAppWebApi.DataStorage.Model.QuestDataBaseContext;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Applications\\Quest\\QuestAppWebApi\\QuestAppWebAPi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuestAppWebApi.DataStorage.Model.QuestDataBaseContext']/@connectionString" />
+  </parameter>
+</parameters>
